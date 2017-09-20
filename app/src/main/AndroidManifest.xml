@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.ritesh.upkeep">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/travicon"
+        android:label="Upkeep"
+        android:roundIcon="@mipmap/logo2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".AddTripActivity" />
+        <activity android:name=".ContactActivity" />
+        <activity android:name=".AddExpenseActivity" />
+        <activity android:name=".historyActivity" />
+        <activity android:name=".ViewTripActivity" />
+        <activity android:name=".GenerateReportActivity"></activity>
+    </application>
+
+</manifest>

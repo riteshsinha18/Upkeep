@@ -1,0 +1,37 @@
+package com.project.ritesh.upkeep;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
+
+public class SplashScreen extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_splash_screen);
+        Thread t =new Thread()
+        {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000);
+                    Intent intent = new Intent(SplashScreen.this, Main2Activity.class);
+                    startActivity(intent);
+                } catch (Exception e) {
+                }
+            }
+        };
+        t.start();
+    }
+    @Override
+    protected void onStop()
+    {
+        super.onStop();
+        finish();
+    }
+}
